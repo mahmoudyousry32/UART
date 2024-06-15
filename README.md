@@ -37,3 +37,7 @@ and restart the counter.
 4) Repeat step 3 n-1 more times to retrieve the remaining data bits.
 5) If the optional parity bit is used, repeat step 3 one time to obtain the parity bit.
 6) Repeat step 3 n more times to obtain the stop bits.
+
+## Testbench
+the testbench is pretty straightforward we just write a couple of bytes to the transmitting FIFO buffer and compare the received data stored in the receiving FIFO buffer with the bytes sent , the testbench consists of a couple of tasks 
+the WRITE_TX task writes a byte to the transmitter FIFO buffer the SET_BAUD tasks sets the baudrate for the UART the READ_RX reads a byte from the receiving FIFO buffer.
